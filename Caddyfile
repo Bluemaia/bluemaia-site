@@ -1,0 +1,17 @@
+# BlueMaia Digital: servidor web na Orange Pi
+# Só ouve em localhost:8081; o acesso público é feito pelo Cloudflare Tunnel.
+:8081 {
+	bind 127.0.0.1
+	root * /srv/bluemaia-site/public
+	encode gzip
+	file_server
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		X-Frame-Options DENY
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=604800"
+}
