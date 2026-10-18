@@ -114,6 +114,11 @@ h2{font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.15;letter-spacing:-.02em;fon
 .connect .btn-line:hover{background:rgba(255,255,255,.1)}
 @media (max-width:820px){.connect .grid{grid-template-columns:1fr}}
 
+.survey{padding:40px 0}
+.survey .box{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;background:#fff;border:1px solid var(--mist);border-left:5px solid var(--sky);border-radius:14px;padding:24px 28px}
+.survey h2{font-size:1.3rem;margin:0 0 4px}
+.survey p{margin:0;color:var(--muted);max-width:60ch}
+
 /* sobre e contacto */
 .duo{display:grid;grid-template-columns:1fr 1fr;gap:56px}
 .contact dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:12px 20px}
@@ -246,6 +251,18 @@ footer p{margin:0 0 6px}
     </div>
   </section>
 
+  <section class="survey" id="questionario">
+    <div class="wrap">
+      <div class="box">
+        <div>
+          <h2><span lang="pt">Ajude-nos a melhorar</span><span lang="de">Helfen Sie uns, besser zu werden</span><span lang="en">Help us improve</span><span lang="es">Ayúdenos a mejorar</span></h2>
+          <p><span lang="pt">Responda a um questionário anónimo de 3 minutos sobre as suas necessidades com computadores e internet.</span><span lang="de">Beantworten Sie eine anonyme 3-Minuten-Umfrage zu Ihren Bedürfnissen rund um Computer und Internet.</span><span lang="en">Answer an anonymous 3-minute survey about your computer and internet needs (available in Portuguese and German).</span><span lang="es">Responda a un cuestionario anónimo de 3 minutos sobre sus necesidades con ordenadores e internet (disponible en portugués y alemán).</span></p>
+        </div>
+        <a class="btn btn-line" href="https://docs.google.com/forms/d/e/1FAIpQLSco2n9H6dJkkz6fkHmrSueXAklnBindvTGN21VsEdC_VBlTGw/viewform" target="_blank" rel="noopener"><span lang="pt">Responder ao questionário</span><span lang="de">Zur Umfrage</span><span lang="en">Take the survey</span><span lang="es">Responder al cuestionario</span></a>
+      </div>
+    </div>
+  </section>
+
   <section id="contacto">
     <div class="wrap duo">
       <div>
@@ -274,7 +291,7 @@ footer p{margin:0 0 6px}
     </div>
     <div>
       <h3><span lang="pt">Proteção de dados</span><span lang="de">Datenschutz</span><span lang="en">Privacy</span><span lang="es">Protección de datos</span></h3>
-      <p><span lang="pt">Os seus dados só são usados para responder ao seu pedido. O acesso remoto só acontece com a sua autorização. Este site não usa cookies nem ferramentas de rastreamento.</span><span lang="de">Ihre Daten werden nur zur Bearbeitung Ihrer Anfrage verwendet. Fernwartung erfolgt nur mit Ihrer Erlaubnis. Diese Website verwendet keine Cookies und kein Tracking.</span><span lang="en">Your data is only used to respond to your request. Remote access only happens with your permission. This website uses no cookies or tracking tools.</span><span lang="es">Sus datos solo se usan para responder a su solicitud. El acceso remoto solo se realiza con su autorización. Este sitio web no usa cookies ni herramientas de seguimiento.</span></p>
+      <p><span lang="pt">Os seus dados só são usados para responder ao seu pedido. O acesso remoto só acontece com a sua autorização. Este site não usa cookies nem ferramentas de rastreamento. O questionário é feito no Google Forms.</span><span lang="de">Ihre Daten werden nur zur Bearbeitung Ihrer Anfrage verwendet. Fernwartung erfolgt nur mit Ihrer Erlaubnis. Diese Website verwendet keine Cookies und kein Tracking. Die Umfrage läuft über Google Forms.</span><span lang="en">Your data is only used to respond to your request. Remote access only happens with your permission. This website uses no cookies or tracking tools. The survey runs on Google Forms.</span><span lang="es">Sus datos solo se usan para responder a su solicitud. El acceso remoto solo se realiza con su autorización. Este sitio web no usa cookies ni herramientas de seguimiento. El cuestionario funciona con Google Forms.</span></p>
     </div>
   </div>
 </footer>
