@@ -2,10 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://bluemaia.ch/</loc>
-    <lastmod>2026-10-18</lastmod>
+    <lastmod>2026-10-20</lastmod>
     <xhtml:link rel="alternate" hreflang="pt" href="https://bluemaia.ch/?lang=pt"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://bluemaia.ch/?lang=de"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://bluemaia.ch/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://bluemaia.ch/?lang=es"/>
+  </url>
+  <url>
+    <loc>https://bluemaia.ch/agb.html</loc>
+    <lastmod>2026-10-20</lastmod>
   </url>
 </urlset>

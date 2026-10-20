@@ -8,6 +8,13 @@ DEST="/srv/bluemaia-site"
 rsync -a --exclude ".git" --exclude "*.sync-conflict-*" "$SRC/" "$DEST/"
 cd "$DEST"
 chmod -R o+rX public
+# Caddy e serviço de avaliações: só reinicia o que mudou
+if ! cmp -s Caddyfile /etc/caddy/Caddyfile; then
+  sudo cp Caddyfile /etc/caddy/Caddyfile && sudo systemctl restart caddy && echo "Caddy atualizado."
+fi
+if systemctl is-enabled -q bluemaia-avaliacoes 2>/dev/null && [ avaliacoes/server.py -nt /srv/bluemaia-avaliacoes/.ultima ]; then
+  sudo systemctl restart bluemaia-avaliacoes && touch /srv/bluemaia-avaliacoes/.ultima && echo "Avaliações reiniciadas."
+fi
 git add -A
 if git diff --cached --quiet; then echo "Sem alterações para publicar."; exit 0; fi
 git commit -qm "$MSG"

@@ -2,9 +2,7 @@
 # Só ouve em localhost:8081; o acesso público é feito pelo Cloudflare Tunnel.
 :8081 {
 	bind 127.0.0.1
-	root * /srv/bluemaia-site/public
 	encode gzip
-	file_server
 	header {
 		X-Content-Type-Options nosniff
 		Referrer-Policy strict-origin-when-cross-origin
@@ -12,6 +10,22 @@
 		Permissions-Policy "camera=(), microphone=(), geolocation=()"
 		-Server
 	}
-	@assets path /assets/*
-	header @assets Cache-Control "public, max-age=604800"
+
+	# Avaliações de clientes (serviço próprio em 127.0.0.1:8093)
+	handle /api/bewertungen {
+		request_body {
+			max_size 8KB
+		}
+		reverse_proxy 127.0.0.1:8093
+	}
+	handle /api/* {
+		respond 404
+	}
+
+	handle {
+		root * /srv/bluemaia-site/public
+		file_server
+		@assets path /assets/*
+		header @assets Cache-Control "public, max-age=604800"
+	}
 }
