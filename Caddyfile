@@ -1,6 +1,6 @@
 # BlueMaia Digital: servidor web na Orange Pi
-# Só ouve em localhost:8081; o acesso público é feito pelo Cloudflare Tunnel.
-:8081 {
+# Só ouve em localhost:8081 e :8181 (o túnel usa a 8181, igual à réplica de Portugal); o acesso público é feito pelo Cloudflare Tunnel.
+:8081, :8181 {
 	bind 127.0.0.1
 	encode gzip
 	header {
