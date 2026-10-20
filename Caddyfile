@@ -8,6 +8,7 @@
 		Referrer-Policy strict-origin-when-cross-origin
 		X-Frame-Options DENY
 		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		X-Node ch
 		-Server
 	}
 
@@ -24,8 +25,20 @@
 
 	handle {
 		root * /srv/bluemaia-site/public
+		try_files {path} {path}.html
 		file_server
 		@assets path /assets/*
 		header @assets Cache-Control "public, max-age=604800"
 	}
+}
+
+# Só avaliações, para a réplica de Portugal (pelo Tailscale). A firewall (ufw) só abre esta porta em tailscale0.
+:8082 {
+	handle /api/bewertungen {
+		request_body {
+			max_size 8KB
+		}
+		reverse_proxy 127.0.0.1:8093
+	}
+	respond 404
 }
