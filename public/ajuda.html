@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt" data-lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajuda remota · BlueMaia Digital</title>
+<meta name="description" content="Ajuda remota BlueMaia Digital: descarregar o programa e ligar-se em segurança. Fernhilfe, remote help, ayuda remota.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+@font-face{font-family:"Lexend";src:url(assets/lexend.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--ink:#0B3A63;--navy:#0E5082;--blue:#127BB3;--sky:#2A9FD8;--paper:#F4F8FB;--mist:#DCEAF4;--muted:#4A6680;--wa:#0E7A52;--warn:#8A4B08;--warnbg:#FFF4E2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Lexend",system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;font-weight:350}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px;border-radius:4px}
+html[data-lang="pt"] [lang]:not(html):not([lang="pt"]){display:none!important}
+html[data-lang="de"] [lang]:not(html):not([lang="de"]){display:none!important}
+html[data-lang="en"] [lang]:not(html):not([lang="en"]){display:none!important}
+html[data-lang="es"] [lang]:not(html):not([lang="es"]){display:none!important}
+header{position:sticky;top:0;background:rgba(244,248,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--mist);z-index:2}
+.bar{max-width:760px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
+.brand img{height:34px;width:auto}
+.brand b{font-weight:650;font-size:1.1rem}
+.langs{display:flex;border:1.5px solid var(--navy);border-radius:999px;overflow:hidden}
+.langs button{font:inherit;font-size:.88rem;font-weight:600;border:0;background:transparent;color:var(--navy);padding:6px 11px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--navy);color:#fff}
+main{max-width:760px;margin:0 auto;padding:40px 20px 64px}
+h1{font-size:clamp(1.8rem,4vw,2.4rem);line-height:1.15;letter-spacing:-.02em;font-weight:650;margin:0 0 10px}
+.lead{color:var(--muted);margin:0 0 22px}
+.warn{background:var(--warnbg);color:var(--warn);border-left:5px solid #E0A100;border-radius:10px;padding:14px 18px;margin:0 0 30px}
+ol{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:18px}
+ol li{counter-increment:s;background:#fff;border:1px solid var(--mist);border-radius:16px;padding:20px 22px 18px 74px;position:relative}
+ol li::before{content:counter(s);position:absolute;left:22px;top:20px;width:36px;height:36px;border-radius:50%;background:var(--blue);color:#fff;font-weight:650;display:grid;place-items:center}
+ol h2{font-size:1.15rem;font-weight:600;margin:4px 0 6px}
+ol p{margin:0 0 8px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;border-radius:12px;padding:13px 20px;margin-top:6px}
+.btn:hover{background:var(--navy)}
+.small{font-size:.92rem;color:var(--muted)}
+.mock{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
+.mock div{border:1px dashed var(--mist);border-left:3px solid var(--blue);border-radius:8px;padding:8px 14px;background:var(--paper)}
+.mock small{display:block;color:var(--muted);font-size:.78rem}
+.mock b{font-size:1.2rem;letter-spacing:.04em;font-weight:600}
+.foot{margin-top:34px;font-size:.9rem;color:var(--muted)}
+@media (max-width:480px){ol li{padding:64px 18px 16px}ol li::before{left:18px;top:16px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <a class="brand" href="./"><img src="assets/logo-mark.png" alt="" width="30" height="34"><b>BlueMaia</b></a>
+    <div class="langs" role="group" aria-label="Idioma / Sprache / Language">
+      <button type="button" data-set="pt" aria-pressed="true">PT</button>
+      <button type="button" data-set="de" aria-pressed="false">DE</button>
+      <button type="button" data-set="en" aria-pressed="false">EN</button>
+      <button type="button" data-set="es" aria-pressed="false">ES</button>
+    </div>
+  </div>
+</header>
+<main>
+  <h1><span lang="pt">Ajuda remota</span><span lang="de">Fernhilfe</span><span lang="en">Remote help</span><span lang="es">Ayuda remota</span></h1>
+  <p class="lead"><span lang="pt">Assim posso ver o seu ecrã e resolver o problema à distância, só com a sua autorização.</span><span lang="de">So kann ich Ihren Bildschirm sehen und das Problem aus der Ferne lösen, nur mit Ihrer Erlaubnis.</span><span lang="en">This lets me see your screen and fix the problem remotely, only with your permission.</span><span lang="es">Así puedo ver su pantalla y resolver el problema a distancia, solo con su autorización.</span></p>
+  <p class="warn"><span lang="pt"><b>Importante:</b> abra este programa só quando estiver a falar comigo. Nunca dê o ID e a palavra-passe a alguém que lhe telefone sem ter pedido ajuda: é uma burla frequente.</span><span lang="de"><b>Wichtig:</b> Öffnen Sie das Programm nur, wenn Sie mit mir in Kontakt sind. Geben Sie ID und Passwort nie jemandem, der Sie unaufgefordert anruft: Das ist ein häufiger Betrug.</span><span lang="en"><b>Important:</b> only open this program when you are in contact with me. Never give the ID and password to someone who calls you unasked: it is a common scam.</span><span lang="es"><b>Importante:</b> abra este programa solo cuando esté hablando conmigo. Nunca dé el ID y la contraseña a alguien que le llame sin haber pedido ayuda: es una estafa frecuente.</span></p>
+  <ol>
+    <li><h2><span lang="pt">Descarregue o programa</span><span lang="de">Programm herunterladen</span><span lang="en">Download the program</span><span lang="es">Descargue el programa</span></h2><p><span lang="pt">Para computadores com Windows. Não é preciso instalar nada.</span><span lang="de">Für Windows-Computer. Es muss nichts installiert werden.</span><span lang="en">For Windows computers. Nothing needs to be installed.</span><span lang="es">Para ordenadores con Windows. No hace falta instalar nada.</span></p><p><a class="btn" href="downloads/rustdesk-host=rd.bluemaia.ch,key=YTLfMGhgY0rFBOa1py3uuDOhdZysUVooaw1rNmo7diA=.exe" download="rustdesk-host=rd.bluemaia.ch,key=YTLfMGhgY0rFBOa1py3uuDOhdZysUVooaw1rNmo7diA=.exe"><span lang="pt">Descarregar ajuda remota</span><span lang="de">Fernhilfe herunterladen</span><span lang="en">Download remote help</span><span lang="es">Descargar ayuda remota</span></a></p><p class="small"><span lang="pt">Tem Mac, telemóvel ou tablet? Escreva-me e envio-lhe as instruções.</span><span lang="de">Haben Sie einen Mac, ein Handy oder Tablet? Schreiben Sie mir, ich schicke Ihnen die Anleitung.</span><span lang="en">Using a Mac, phone or tablet? Message me and I will send you instructions.</span><span lang="es">¿Tiene Mac, móvil o tablet? Escríbame y le envío las instrucciones.</span></p></li>
+    <li><h2><span lang="pt">Abra o ficheiro</span><span lang="de">Datei öffnen</span><span lang="en">Open the file</span><span lang="es">Abra el archivo</span></h2><p><span lang="pt">Abra o ficheiro que descarregou. Se o Windows perguntar se quer executar o programa, clique em «Executar» ou «Sim».</span><span lang="de">Öffnen Sie die heruntergeladene Datei. Fragt Windows, ob das Programm ausgeführt werden soll, klicken Sie auf «Ausführen» oder «Ja».</span><span lang="en">Open the file you downloaded. If Windows asks whether to run it, click «Run» or «Yes».</span><span lang="es">Abra el archivo descargado. Si Windows pregunta si desea ejecutarlo, haga clic en «Ejecutar» o «Sí».</span></p></li>
+    <li><h2><span lang="pt">Envie-me o ID e a palavra-passe</span><span lang="de">ID und Passwort senden</span><span lang="en">Send me the ID and password</span><span lang="es">Envíeme el ID y la contraseña</span></h2><p><span lang="pt">Do lado esquerdo aparecem um <b>ID</b> (um número) e uma <b>palavra-passe de uso único</b>. Envie-me os dois por WhatsApp.</span><span lang="de">Links sehen Sie eine <b>ID</b> (eine Zahl) und ein <b>Einmal-Passwort</b>. Schicken Sie mir beides per WhatsApp.</span><span lang="en">On the left you will see an <b>ID</b> (a number) and a <b>one-time password</b>. Send me both on WhatsApp.</span><span lang="es">A la izquierda aparecen un <b>ID</b> (un número) y una <b>contraseña de un solo uso</b>. Envíeme los dos por WhatsApp.</span></p><div class="mock" aria-hidden="true"><div><small>ID</small><b>123 456 789</b></div><div><small><span lang="pt">Palavra-passe de uso único</span><span lang="de">Einmal-Passwort</span><span lang="en">One-time password</span><span lang="es">Contraseña de un solo uso</span></small><b>ab3xk9</b></div></div></li>
+    <li><h2><span lang="pt">Aceite a ligação</span><span lang="de">Verbindung annehmen</span><span lang="en">Accept the connection</span><span lang="es">Acepte la conexión</span></h2><p><span lang="pt">Quando eu me ligar, aparece uma janela: clique em «Aceitar». Vê tudo o que faço no ecrã e pode terminar a qualquer momento com «Desligar».</span><span lang="de">Wenn ich mich verbinde, erscheint ein Fenster: Klicken Sie auf «Annehmen». Sie sehen alles am Bildschirm und können jederzeit mit «Trennen» beenden.</span><span lang="en">When I connect, a window appears: click «Accept». You can see everything I do and end the session at any time with «Disconnect».</span><span lang="es">Cuando me conecte, aparece una ventana: haga clic en «Aceptar». Ve todo lo que hago y puede terminar en cualquier momento con «Desconectar».</span></p></li>
+  </ol>
+  <p class="foot"><span lang="pt">O programa é o RustDesk, de código aberto (licença AGPL, código em <a href="https://github.com/rustdesk/rustdesk">github.com/rustdesk</a>), já configurado para o servidor próprio da BlueMaia. A ligação é cifrada.</span><span lang="de">Das Programm ist RustDesk, Open Source (Lizenz AGPL, Quellcode auf <a href="https://github.com/rustdesk/rustdesk">github.com/rustdesk</a>), bereits für den eigenen Server von BlueMaia eingerichtet. Die Verbindung ist verschlüsselt.</span><span lang="en">The program is RustDesk, open source (AGPL licence, source at <a href="https://github.com/rustdesk/rustdesk">github.com/rustdesk</a>), already set up for BlueMaia’s own server. The connection is encrypted.</span><span lang="es">El programa es RustDesk, de código abierto (licencia AGPL, código en <a href="https://github.com/rustdesk/rustdesk">github.com/rustdesk</a>), ya configurado para el servidor propio de BlueMaia. La conexión está cifrada.</span><br><a href="./"><span lang="pt">← Voltar à página inicial</span><span lang="de">← Zurück zur Startseite</span><span lang="en">← Back to the home page</span><span lang="es">← Volver a la página principal</span></a></p>
+</main>
+<script>
+(function(){
+  var root=document.documentElement,L=['pt','de','en','es'];
+  var T={pt:'Ajuda remota · BlueMaia Digital',de:'Fernhilfe · BlueMaia Digital',en:'Remote help · BlueMaia Digital',es:'Ayuda remota · BlueMaia Digital'};
+  function set(l){root.setAttribute('data-lang',l);root.lang=l;document.title=T[l];
+    document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.set===l)});
+    try{localStorage.setItem('bm-lang',l)}catch(e){}}
+  var q=new URLSearchParams(location.search).get('lang'),s=null;try{s=localStorage.getItem('bm-lang')}catch(e){}
+  var nav=(navigator.language||'').slice(0,2).toLowerCase();
+  set(L.indexOf(q)>=0?q:(L.indexOf(s)>=0?s:(L.indexOf(nav)>=0?nav:'pt')));
+  document.querySelectorAll('.langs button').forEach(function(b){b.onclick=function(){set(b.dataset.set)}});
+})();
+</script>
+</body>
+</html>
