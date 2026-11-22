@@ -10,9 +10,10 @@ case "$KEY" in ""|*/*) echo "Chave em ~/rustdesk-chave-publica.txt em falta ou i
 NAME="rustdesk-host=rd.bluemaia.ch,key=${KEY}.exe"
 
 echo "== 1/3 Versão mais recente"
-J=$(curl -fsSL https://api.github.com/repos/rustdesk/rustdesk/releases/latest)
-TAG=$(echo "$J" | grep -m1 -oE '"tag_name": *"[^"]+"' | cut -d'"' -f4)
-URL=$(echo "$J" | grep -oE 'https://[^"]+/rustdesk-[0-9.]+-x86_64\.exe' | head -1)
+J=$(curl -fsSL https://api.github.com/repos/rustdesk/rustdesk/releases/latest) || { echo "Não consegui contactar o GitHub."; exit 1; }
+# (sem "echo | grep -m1": com pipefail, o fecho antecipado do pipe parava o script sem mensagem)
+TAG=$(grep -oE '"tag_name": *"[^"]+"' <<<"$J" | awk -F'"' 'NR==1{print $4}' || true)
+URL=$(grep -oE 'https://[^"]+/rustdesk-[0-9.]+-x86_64\.exe' <<<"$J" | awk 'NR==1' || true)
 [ -n "$URL" ] || { echo "Não encontrei o .exe x86_64 na versão $TAG."; exit 1; }
 echo "RustDesk $TAG: $URL"
 
